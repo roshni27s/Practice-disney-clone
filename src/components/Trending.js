@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectRecommend, setMovies,  } from "../features/user/movie/movieSlice";
+import { selectTrending } from "../features/user/movie/movieSlice";
 
-const Recommends = (props) => {
-    const movies = useSelector(selectRecommend);
+const Trending = (props) => {
+    const movies = useSelector(selectTrending);
     return (
         <Container>
-            <h4>Recommended for you</h4>
+            <h4>Trending</h4>
             <Content>
                 {
                     movies && movies.map((movie,key)=> (
@@ -66,4 +66,4 @@ img{
 }
 `
 
-export default Recommends;
+export default Trending;
